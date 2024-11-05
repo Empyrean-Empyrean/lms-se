@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Create Assignment{% endblock %}
+
+{% block content %}
+  <h2>Create Assignment</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="title">Assignment Title:</label>
+    <input type="text" id="title" name="title">
+    <label for="course_id">Course:</label>
+    <select id="course_id" name="course_id">
+      {% for course in courses %}
+        <option value="{{ course.id }}">{{ course.title }}</option>
+      {% endfor %}
+    </select>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea>
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date">
+    <button type="submit">Create Assignment</button>
+  </form>
+{% endblock %}

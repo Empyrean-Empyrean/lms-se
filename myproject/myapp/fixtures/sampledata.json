@@ -1,0 +1,35 @@
+[
+  {
+    "model": "myapp.customuser",
+    "pk": 1,
+    "fields": {
+      "username": "student1",
+      "password": "pbkdf2_sha256$720000$bqyBbgrSbquMpNVxb8PoqL$W/iG/czCuNfUkbRVXFwAaMO2fHrwVlERgiO/RIw2jMQ=", 
+      "is_student": true,
+      "is_instructor": false,
+      "is_librarian": false
+    }
+  },
+  {
+    "model": "myapp.customuser",
+    "pk": 2,
+    "fields": {
+      "username": "instructor1",
+      "password": "pbkdf2_sha256$720000$bqyBbgrSbquMpNVxb8PoqL$W/iG/czCuNfUkbRVXFwAaMO2fHrwVlERgiO/RIw2jMQ=",  
+      "is_student": false,
+      "is_instructor": true,
+      "is_librarian": false
+    }
+  },
+  {
+    "model": "myapp.customuser",
+    "pk": 3,
+    "fields": {
+      "username": "librarian1",
+      "password": "pbkdf2_sha256$720000$bqyBbgrSbquMpNVxb8PoqL$W/iG/czCuNfUkbRVXFwAaMO2fHrwVlERgiO/RIw2jMQ=",  
+      "is_student": false,
+      "is_instructor": false,
+      "is_librarian": true
+    }
+  }
+]

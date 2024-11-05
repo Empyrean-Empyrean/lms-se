@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Assignments{% endblock %}
+
+{% block content %}
+  <h2>Assignments</h2>
+  <ul>
+    {% for assignment in assignments %}
+      <li>{{ assignment.title }} for Course {{ assignment.course.title }} - Due: {{ assignment.due_date }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

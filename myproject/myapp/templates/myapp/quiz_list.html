@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Quizzes{% endblock %}
+
+{% block content %}
+  <h2>Quizzes</h2>
+  <ul>
+    {% for quiz in quizzes %}
+      <li>{{ quiz.title }} for Course {{ quiz.course.title }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

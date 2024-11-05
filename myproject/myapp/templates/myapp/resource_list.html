@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Resources{% endblock %}
+
+{% block content %}
+  <h2>Resources for Course ID {{ course_id }}</h2>
+  <ul>
+    {% for resource in resources %}
+      <li>{{ resource.title }}: <a href="{{ resource.content.url }}">Download</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

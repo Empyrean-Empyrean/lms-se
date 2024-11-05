@@ -1,0 +1,21 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Create Quiz{% endblock %}
+
+{% block content %}
+  <h2>Create Quiz</h2>
+  <form method="post">
+    {% csrf_token %}
+    <label for="title">Quiz Title:</label>
+    <input type="text" id="title" name="title">
+    <label for="course_id">Course:</label>
+    <select id="course_id" name="course_id">
+      {% for course in courses %}
+        <option value="{{ course.id }}">{{ course.title }}</option>
+      {% endfor %}
+    </select>
+    <label for="questions">Questions (JSON format):</label>
+    <textarea id="questions" name="questions"></textarea>
+    <button type="submit">Create Quiz</button>
+  </form>
+{% endblock %}

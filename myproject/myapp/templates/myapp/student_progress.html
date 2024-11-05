@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Student Progress{% endblock %}
+
+{% block content %}
+  <h2>Progress for Student ID {{ student_id }}</h2>
+  <ul>
+    {% for report in reports %}
+      <li>{{ report.course.title }}: {{ report.progress }}%</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
